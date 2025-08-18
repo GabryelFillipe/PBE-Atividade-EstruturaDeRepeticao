@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1>Atividade prática classificando resposta</h1>
+    <p>Exibindo a lista de numeros entre a menor resposta e a maior</p>
+    <script>
+        let resposta1 = prompt('Digite o valor desejado')
+        let resposta2 = prompt('Digite o valor desejado')
+       
+        if(resposta1 >= resposta2){
+            while(resposta1 >= resposta2){
+                console.log('Número: ' + resposta2)
+                resposta2++
+            }
+        }else if(resposta2 => resposta1){
+            while(resposta2 >= resposta1){
+                console.log('Número: ' + resposta1)
+                resposta1++
+            }
+        }
+
+    </script>
+</body>
+</html>
