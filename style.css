@@ -7,6 +7,13 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    width: 480px;
+    margin-left: 24px;
 }
 table{
     width: 80%;
