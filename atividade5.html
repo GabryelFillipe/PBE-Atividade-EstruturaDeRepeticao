@@ -3,23 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Atividade 3</title>
 </head>
 <body>
     <h1>Atividade prática fazendo tabuada com respostas do usuario</h1>
     <p>Exibindo o resultado da tabuada do usuario</p>
     <a href="index.html">Home</a>
+
+    <table id="table">
+            <tr>
+                <td>Multiplicando</td>
+                <td>X</td>
+                <td>multiplicador</td>
+                <td>Resultado</td>
+            </tr>
+            <!-- <tr>
+                <td>2</td>
+                <td>X</td>
+                <td>10</td>
+                <td>20</td>
+            </tr> -->
+    </table>
     <script>
-        let resposta1 = prompt('Digite o primeiro valor')
-        let resposta2 = prompt('Digite o ultimo valor da multiplicação')
-        let i = 0
+        const resposta1 = prompt('Digite o primeiro valor')
+        const resposta2 = prompt('Digite o ultimo valor da multiplicação')
+       
 
-        while(i <= resposta2){
-            console.log(resposta1 + ' '  + 'X' + ' ' + i + ' = ' + resposta1*i )
-            i++
+        function criarTabela(){
+            const containerTabela = document.getElementById('table')
+           
+
+             let X = 'X'
+            let i = 0
+            for(let i = 0; i <= resposta2; i++){
+                let resultado = resposta1*i
+
+                const linha = document.createElement('tr')
+                const textcoluna1 = document.createElement('td')
+                const textcoluna2 = document.createElement('td')
+                const textcoluna3 = document.createElement('td')
+                const textcoluna4 = document.createElement('td')
+
+                textcoluna1.textContent = resposta1
+                textcoluna2.textContent = X
+                textcoluna3.textContent = i
+                textcoluna4.textContent = resultado
+
+                containerTabela.appendChild(linha)
+                linha.appendChild(textcoluna1)
+                linha.appendChild(textcoluna2)
+                linha.appendChild(textcoluna3)
+                linha.appendChild(textcoluna4)
+
+            }
+        //     while(i <= resposta2){
+        //     console.log(resposta1 + ' '  + 'X' + ' ' + i + ' = ' + resposta1*i )  
+            
+           
+           
+            
+
+        //     i++
+        // }
+           
+       
+            
         }
+        function carregarTabela(){
+            
+        criarTabela()
+        }
+        
 
-
+        carregarTabela()
         
 
     </script>
